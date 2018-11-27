@@ -37,7 +37,7 @@ func bashEscape(str string) string {
 func (nopCloser) Close() error { return nil }
 
 // GetCurlCommand returns a CurlCommand corresponding to an http.Request
-func GetCurlCommand(req *http.Request) (*CurlCommand, error) {
+func GetCurlCommand(req http.Request) (*CurlCommand, error) {
 	command := CurlCommand{}
 
 	command.append("curl")
